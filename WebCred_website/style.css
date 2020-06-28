@@ -27,7 +27,7 @@ body,html {
 
 /* buttons */
 .rec2 {
-    height: 60%;
+    height: 100%;
     width: 75%;
     opacity: 100%;
     position: fixed;
@@ -38,6 +38,28 @@ body,html {
     background-color: rgb(0, 0, 0);
     color: azure;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+.rec3 {
+    height: 100%;
+    width: 75%;
+    opacity: 100%;
+    position: absolute;
+    top: 66%;
+    left: 12%;
+    bottom: 20%;
+    right: 20%;
+    background-color: rgb(0, 0, 0);
+    color: azure;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+iframe:focus {
+  outline: none;
+}
+
+iframe[seamless] {
+  display: block;
 }
 
 .navbar {
