@@ -29,7 +29,7 @@ body,html {
 .rec2 {
     height: 60%;
     width: 75%;
-    opacity: 95%;
+    opacity: 100%;
     position: fixed;
     top: 33%;
     left: 12%;
@@ -66,4 +66,42 @@ body,html {
     float: left;
     width: 25%; 
     text-align: center;  
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 2px solid white;
+  float: left;
+  width: 70%;
+  background: #ffffff;
+}
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 9%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 2px solid white;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
 }
