@@ -93,5 +93,5 @@ class prediction:
         return (score, warnings)
 
 
-object = prediction()
-print(object.predictArticle("America leaves Paris Climate Accords"))
+#object = prediction()
+#print(object.predictArticle("America leaves Paris Climate Accords"))
