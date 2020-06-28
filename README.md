@@ -3,7 +3,7 @@ A link to our devpost submission can be found here: https://devpost.com/software
 
 ## Inspiration
 As the internet expands, people with malicious intent will also naturally increase. It’s important to keep every internet user safe; especially the more vulnerable. One of the most prevalent ways that people are entrapped into giving away financial or personal details is with Fake Job listings.
-## How it works.
+## How it works
 **General** 
 On the main page the user is prompted to enter a URL for a news article, job listing, or any general webpage. We then use HTTP requests with Beautiful Soup to parse and extract the relevant details from the webpage. These details are then transferred to our back-end through Flask; Three Natural Language Processing Neural Networks will then extract various text features and present them to the user. 
 
