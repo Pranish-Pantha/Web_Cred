@@ -23,3 +23,6 @@ We wanted to help enable visitors to visually understand our models, but we didn
 
 ## What's next for WebCred
 We want to be able to expand our site to handle a broader range of data sources in order to ensure user dependability of our site. We’d also like to add a classification system (using graphs, charts, lists) that informs the users of what percent of the source is credible. We believe this feature can improve the overall awareness of different types of online sources and can allow users to decide whether or not to use their preferred websites.
+
+## Images
+![](img1.PNG)
