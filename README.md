@@ -16,7 +16,7 @@ We acquired data came the famous IMDB Dataset for sentiment analysis, the “Emp
 
 Our initial NLP model used a simple
 
-We wanted to help enable visitors to visually understand our models, but we didn’t know how to represent such an abstract concept. We eventually were able to integrate a TensorBoard Embedded Projector, which provides data visualization by mapping the labels to values in vector space.
+We wanted to help enable visitors to visually understand our models, but we didn’t know how to represent such an abstract concept. We eventually were able to integrate a [TensorBoard Embedded Projector](https://projector.tensorflow.org/?config=https://gist.githubusercontent.com/Pranish-Pantha/00d094012649715bce020d9ae8382f45/raw/9efadc5c8eb2c442db6b107534cf09ba92bd5186/proj.json), which provides data visualization by mapping the labels to values in vector space.
 
 ## What's next for WebCred - Check It’s Credibility!
 We want to be able to expand our site to handle a broader range of data sources in order to ensure user dependability of our site. We’d also like to add a classification system (using graphs, charts, lists) that informs the users of what percent of the source is credible. We believe this feature can improve the overall awareness of different types of online sources and can allow users to decide whether or not to use their preferred websites.
