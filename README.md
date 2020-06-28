@@ -11,7 +11,8 @@ When Flask passes a string, tokenization and padding is applied. The padded sequ
 
 We acquired data came the famous IMDB Dataset for sentiment analysis, the “Employment Scam Aegean Dataset” from The University of the Aegean | Laboratory of Information & Communication Systems Security for fake Job Listing Detection, and “Fake and real news dataset” from Clément Bisaillon on Kaggle for fake news detection.
 
-![](
+(See Python Natural Language Processing Flowchart)
+
 ## Challenges we ran into
 
 Our initial NLP model used a simple Dense Neural Network (DNN) following embedding. With this technique we were observing around 70-80% accuracy on our validation data. Although this level of detection is Statistically Significant, it results in a relatively high chance of a False Prediction. We reasoned that this was due to word order not being a factor in the network's predictions. To solve this issue we implemented a Recurrent Neural Network (RNN) with Bidirectional LSTMs (Long Short Term Memory) to allow for all words in the sentence to affect each other. After making this modification we had our validation accuracy increased to 96%+ which is a significant improvement over our simple DNN.
