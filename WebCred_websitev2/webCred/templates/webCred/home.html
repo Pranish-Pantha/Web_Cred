@@ -1,0 +1,31 @@
+{% extends "webCred/base.html" %}
+{% load static %}
+
+{% block content %}
+<h1 class="text-center">WebCred</h1>
+  <h3 class="text-center text-capitalize">AI Powered Internet Credibility Checker</h3>
+    <div class="row justify-content-center">
+    </div>
+        <p class="text-center">&nbsp;  &nbsp;</p>
+        <img src="{% static "webCred/images/messy_table.jpg" %}" alt="" width="100%" height="100%" margin-left='auto' margin-right='auto' class="img-fluid">
+        <br></br>
+        <div class="container">
+        <div class="row">
+        <div class="text-center col-md-6 col-12">
+        <h3 class="text-center">Job Listing Check&nbsp;&nbsp;</h3>
+        <p class="text-center">Avoid revealing sensitive financial information on fake job listings.</p>
+        <p class="text-center">WebCred uses Natural Language Processing trained on tens of thousands of fake job listings to detect suspicious characteristics.</p>
+
+        <a class="btn btn-primary btn-lg" href="{% url 'webCred-jobListings' %}" role="button">Job Listing Check</a>
+        <p>&nbsp;</p>
+        </div>
+        <div class="text-center col-md-6 col-12">
+        <h3 class="text-center">Real/Fake Article  Detector&nbsp;&nbsp;</h3>
+        <p class="text-center">Ensure that your news comes from a reliable source</p>
+        <p class="text-center">Our Natural Language Processing System references 100,000+ articles to predict the reliability of your reading material.</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'webCred-Articles' %}" role="button">Real/Fake Article Detector</a>
+      </div>
+    </div>
+  </div>
+<hr>
+{% endblock content %}

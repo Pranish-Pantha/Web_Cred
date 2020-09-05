@@ -1,0 +1,8 @@
+tensorflow
+django
+django-crispy-forms
+pickle-mixin
+requests
+python-dotenv
+lxml
+beautifulsoup4

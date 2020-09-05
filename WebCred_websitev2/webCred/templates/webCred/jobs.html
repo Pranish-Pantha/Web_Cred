@@ -1,0 +1,64 @@
+{% extends "webCred/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+  <h2 class="text-center"> Fake Job Listing Detector </h2>
+  <hr>
+        <div class="container">
+        <div class="row">
+        <div class="text-center col-md-5 col-12">
+          <div class="jumbotron bg-secondary text-white">
+            <form method='post' id='jobForm'>
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-info" type="submit">Submit</button>
+            </form>
+          </div>
+
+          <div class="jumbotron bg-secondary text-white">
+            <h1 class="text-info"> {{ checkNum }} </h1>
+            <h2> Searches Made on the Fake Job Listing Detector </h2>
+          </div>
+
+        </div>
+        <div class="text-center col-md-7 col-12">
+
+          {% if isUpdated %}
+          <div class="jumbotron bg-secondary text-white">
+            <h2 class="text-center">Results</h2>
+            <hr>
+            {% if isScam %}
+              <div class="jumbotron bg-danger text-white">
+                <h3> Scam characteristics Detected </h3>
+                <h3> Neural Network Confidence: {{ confidence}}% </h3>
+              </div>
+            {% else %}
+            <div class="jumbotron bg-success text-white">
+              <h3> No Significant Scam Characteristics Detected </h3>
+              <h3> Neural Network Confidence: {{ confidence }}% </h3>
+            </div>
+
+            {% endif %}
+            <hr>
+            <h3 class="text-center">What does this mean?</h3>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+         {% endif %}
+
+          <div class="jumbotron bg-secondary text-white">
+            <h3 class="text-center">General Job Safety Tips</h3>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p class="text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <a class="btn btn-info btn-lg" href="https://www.consumer.ftc.gov/articles/0243-job-scams" target="_blank" role="button">Learn More</a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+{% endblock content %}

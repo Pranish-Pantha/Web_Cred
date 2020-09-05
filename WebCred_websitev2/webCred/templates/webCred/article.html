@@ -1,0 +1,58 @@
+{% extends "webCred/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<h3 class="text-center"> Article Real/Fake Detector </h3>
+<hr>
+  <div class="container center_div">
+    <form method="post" class='example'>
+    <div class="input-group mb-3">
+      {% csrf_token %}
+      {{ form.url }}
+      <div class="input-group-append">
+        <button class="btn btn-info" type="submit">Submit</button>
+      </div>
+     </div>
+    </form>
+  </div>
+<hr>
+
+{% if errorMessage %}
+<h2 class='text-center'> {{ errorMessage }} </h2>
+{% endif %}
+
+{% if isUpdated %}
+<div class="jumbotron bg-secondary text-white">
+  <div class="container center_div">
+      <h5> Article Title: </h5>
+      <form method="post" class='example'>
+      <div class="input-group mb-3">
+        {% csrf_token %}
+        {{ formName.articleName }}
+        <div class="input-group-append">
+          <button class="btn btn-info" type="submit">Submit</button>
+      </form>
+  </div>
+{% endif %}
+
+</div>
+
+{% if confidence %}
+<br>
+  {% if isFake %}
+    <div class="jumbotron bg-danger text-white">
+      <h3 class="text-center"> Fake Article Features Detected </h3>
+      <h3 class="text-center"> Neural Network Confidence: {{ confidence }}% </h3>
+    </div>
+  {% else %}
+    <div class="jumbotron bg-success text-white">
+      <h3 class="text-center"> No Fake Article Features Detected </h3>
+      <h3 class="text-center"> Neural Network Confidence: {{ confidence }}% </h3>
+    </div>
+  {% endif %}
+{% endif %}
+
+
+{% endblock content %}
