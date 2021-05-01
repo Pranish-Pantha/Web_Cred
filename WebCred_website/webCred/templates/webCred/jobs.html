@@ -1,0 +1,62 @@
+{% extends "webCred/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+  <h2 class="text-center"> Fake Job Listing Detector </h2>
+  <hr>
+        <div class="container">
+        <div class="row">
+        <div class="text-center col-md-5 col-12">
+          <div class="jumbotron bg-secondary text-white">
+            <form method='post' id='jobForm' action="{% url 'webCred:job-listings' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <button class="btn btn-info" type="submit">Submit</button>
+            </form>
+          </div>
+
+          <div class="jumbotron bg-secondary text-white">
+            <h1 class="text-info"> {{ checkNum }} </h1>
+            <h2> Searches Made on the Fake Job Listing Detector </h2>
+          </div>
+
+        </div>
+        <div class="text-center col-md-7 col-12">
+
+          {% if isUpdated %}
+          <div class="jumbotron bg-secondary text-white">
+            <h2 class="text-center">Results</h2>
+            <hr>
+            {% if isScam %}
+              <div class="jumbotron bg-danger text-white">
+                <h3> Scam characteristics Detected </h3>
+                <h3> Neural Network Confidence: {{ confidence}}% </h3>
+              </div>
+            {% else %}
+            <div class="jumbotron bg-success text-white">
+              <h3> No Significant Scam Characteristics Detected </h3>
+              <h3> Neural Network Confidence: {{ confidence }}% </h3>
+            </div>
+
+            {% endif %}
+            <hr>
+            <h3 class="text-center">What does this mean?</h3>
+            <p class="text-center">The components of the job listing were analyzed by the Neural Network. After running a prediction, the Network will either determine that the job listing appears trustworthy or a scam.</p>
+          </div>
+         {% endif %}
+
+          <div class="jumbotron bg-secondary text-white">
+            <h3 class="text-center">General Job Safety Tips</h3>
+            <p class="text-center">Some job listings are designed to take your personal infromation. Applicants will fill out forms for jobs that do not exist. This is why it is important to not give sensitive information, such as birth date, unless you are positive that that you have a valid job listing.</p>
+            <a class="btn btn-info btn-lg" href="https://www.consumer.ftc.gov/articles/job-scams" target="_blank" role="button">Learn More</a>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+{% endblock content %}

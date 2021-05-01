@@ -1,16 +1,16 @@
 # WebCred | Data Day Grind Hackathon
-A link to our devpost submission can be found here: https://devpost.com/software/webcred-o6q8fh
+A link to our devpost submission can be found ![here](https://devpost.com/software/webcred-o6q8fh)
 
 ## Inspiration
 As the internet expands, people with malicious intent will also naturally increase. It’s important to keep every internet user safe; especially the more vulnerable. One of the most prevalent ways that people are entrapped into giving away financial or personal details is with Fake Job listings.
 ## How it works
 **General** 
-On the main page the user is prompted to enter a URL for a news article, job listing, or any general webpage. We then use HTTP requests with Beautiful Soup to parse and extract the relevant details from the webpage. These details are then transferred to our back-end through Flask; Three Natural Language Processing Neural Networks will then extract various text features and present them to the user. 
+On the main page the user is prompted to enter a URL for a news article, job listing, or any general webpage. We then use HTTP requests with Beautiful Soup to parse and extract the relevant details from the webpage. These details are then transferred to our back-end through Django; Three Natural Language Processing Neural Networks will then extract various text features and present them to the user. 
 
 **How the Natural Language Processing Works.**
 Between the 3 NLP models, we used 125,000+ units of data (strings) to train and validate the networks. These strings are tokenized (mapped to a unique integer), padded (truncated and concatenated to have a common size), and passed into a recurrent neural network for training. After training the model is exported and used for future predictions.
 
-When Flask passes a string, tokenization and padding is applied. The padded sequence is then passed to the trained model and Predictions are made. These predictions and the associated confidence is then returned to the user through Flask.
+When Django passes a string, tokenization and padding is applied. The padded sequence is then passed to the trained model and Predictions are made. These predictions and the associated confidence is then returned to the user through Django.
 
 We acquired data came the famous IMDB Dataset for sentiment analysis, the “Employment Scam Aegean Dataset” from The University of the Aegean | Laboratory of Information & Communication Systems Security for fake Job Listing Detection, and “Fake and real news dataset” from Clément Bisaillon on Kaggle for fake news detection.
 
@@ -26,19 +26,10 @@ We wanted to help enable visitors to visually understand our models, but we didn
 We want to be able to expand our site to handle a broader range of data sources in order to ensure user dependability of our site. We’d also like to add a classification system (using graphs, charts, lists) that informs the users of what percent of the source is credible. We believe this feature can improve the overall awareness of different types of online sources and can allow users to decide whether or not to use their preferred websites.
 
 ## Our Website: Home - Landing Page
-![](img1.png)
+![](WebCred_website\static\webCred\README\home.png)
 
 ## Job Listing Page
-![](img2.png)
+![](WebCred_website\static\webCred\README\job.png)
 
 ## News Article Page
-![](img3.png)
-
-## Website Page
-![](img4.png)
-
-## Sample Results Screen
-![](results.png)
-
-##  Python Natural Language Processing Flowchart
-![](flowchart.jpg)
+![](WebCred_website\static\webCred\README\articles.png)
