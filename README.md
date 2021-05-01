@@ -1,5 +1,5 @@
 # WebCred | Data Day Grind Hackathon
-A link to our devpost submission can be found ![here](https://devpost.com/software/webcred-o6q8fh)
+A link to our devpost submission can be found [here](https://devpost.com/software/webcred-o6q8fh)
 
 ## Inspiration
 As the internet expands, people with malicious intent will also naturally increase. It’s important to keep every internet user safe; especially the more vulnerable. One of the most prevalent ways that people are entrapped into giving away financial or personal details is with Fake Job listings.
